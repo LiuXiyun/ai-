@@ -47,13 +47,6 @@ rss:
     enabled: true
     max_age_days: 5
 
-  rss:
-  enabled: true
-
-  freshness_filter:
-    enabled: true
-    max_age_days: 5
-
   feeds:
     # —— SEO / GEO（高稳定性） ——
     - id: "search-engine-land"
@@ -72,18 +65,22 @@ rss:
       name: "Moz Blog"
       url: "https://moz.com/blog/feed"
 
+    # ❌ 该源在你日志中 404，先禁用
     - id: "semrush-blog"
       name: "SEMrush Blog"
       url: "https://www.semrush.com/blog/rss.xml"
+      enabled: false
 
     # —— AI / 模型 / 工具（稳定） ——
     - id: "huggingface-blog"
       name: "Hugging Face Blog"
       url: "https://huggingface.co/blog/feed.xml"
 
+    # ❌ 该源在你日志中 404，先禁用
     - id: "openai-blog-github"
       name: "OpenAI Blog (GitHub Mirror)"
       url: "https://raw.githubusercontent.com/openai/openai-blog/main/feed.xml"
+      enabled: false
 
     - id: "github-blog"
       name: "GitHub Blog"
@@ -101,7 +98,6 @@ rss:
     - id: "hn-ai"
       name: "Hacker News (AI)"
       url: "https://hnrss.org/newest?q=AI"
-
 
 # ===============================================================
 # 4. 报告模式（情报模式）
