@@ -103,7 +103,7 @@ rss:
 # 4. 报告模式（情报模式）
 # ===============================================================
 report:
-  mode: "incremental"            # 🔥 只推“新增信号”
+  mode: "current"            # 🔥 现在推“存量信号” /incremental 增量
   display_mode: "keyword"
   rank_threshold: 5
   sort_by_position_first: false
